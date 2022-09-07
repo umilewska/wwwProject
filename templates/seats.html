@@ -8,19 +8,26 @@
     <title>Movie Seat Booking</title>
   </head>
   <body>
+    <div class="movie-container">
+      <label> Bilet</label>
+      <select id="movie">
+        <option value="12.50">Ulgowy (12.50 zł)</option>
+        <option value="17.50">Normalny (17.50 zł)</option>
+      </select>
+    </div>
 
     <ul class="showcase">
       <li>
         <div class="seat"></div>
-        <small>Available</small>
+        <small>Dostępne</small>
       </li>
       <li>
         <div class="seat selected"></div>
-        <small>Selected</small>
+        <small>Wybrane</small>
       </li>
       <li>
         <div class="seat sold"></div>
-        <small>Sold</small>
+        <small>Zajęte</small>
       </li>
     </ul>
     <div class="container">
@@ -88,6 +95,13 @@
         <div class="seat"></div>
       </div>
     </div>
-    <script src="../static/actions/seats_script.js"></script>
+
+    <p class="text">
+      Wybrano <span id="count">0</span> miejsca. Łącznie do zapłacenia: <span
+        id="total"
+        >0</span
+      >
+    </p>
+    <script src="{{ url_for('static',filename='actions/seats_script.js')}}"></script>
   </body>
 </html>

@@ -16,6 +16,22 @@ body {
   margin: 0;
 }
 
+.movie-container {
+  margin: 20px 0;
+}
+
+.movie-container select {
+  background-color: #fff;
+  border: 0;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-left: 10px;
+  padding: 5px 15px 5px 15px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
 .container {
   perspective: 1000px;
   margin-bottom: 30px;
@@ -88,4 +104,12 @@ body {
   margin: 15px 0;
   transform: rotateX(-48deg);
   box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
+}
+
+p.text{
+    margin: 5px 0;
+}
+
+p.text span{
+    color: rgb(158, 248, 158);
 }
