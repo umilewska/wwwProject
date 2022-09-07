@@ -46,9 +46,7 @@
     </div>
     <div class="container">
         <div class="content-container">
-            <div class="featured-content">
-
-            </div>
+         <!--    <div class="featured-content"></div> -->
             <div class="movie-list-container">
                 <h1 class="movie-list-title">REPERTUAR</h1>
                 <div class="movie-list-wrapper">
@@ -56,51 +54,23 @@
                         <div class="movie-list-item">
                             <img class="movie-list-item-img" src="../static/images/batman.jpg" alt="">
                             <span class="movie-list-item-title">BATMAN</span>
-                            <button class="movie-list-item-button">KUP BILET</button>
+                            <form action="/seanseBatman" method="post">
+                                <button class="movie-list-item-button" name="action_movie" value="batman">KUP BILET</button>
+                            </form>
                         </div>
                         <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="../static/images/beast-440690l.jpg" alt="">
-                            <span class="movie-list-item-title">BESTIA</span>
-                            <button class="movie-list-item-button">KUP BILET</button>
+                            <img class="movie-list-item-img" src="../static/images/django.jpg" alt="">
+                            <span class="movie-list-item-title">DJANGO</span>
+                            <form action="/seanseDjango" method="post">
+                                <button class="movie-list-item-button" name="action_movie" value="django">KUP BILET</button>
+                            </form>
                         </div>
                         <div class="movie-list-item">
                             <img class="movie-list-item-img" src="../static/images/bullet_train.jpg" alt="">
                             <span class="movie-list-item-title">BULLET TRAIN</span>
-                            <button class="movie-list-item-button">KUP BILET</button>
-                        </div>
-                    </div>
-                    <div class="movie-list2">
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="../static/images/Trzy-Tysiace-Lat-Tesknoty.jpg" alt="">
-                            <span class="movie-list-item-title">TRZY TYSIĄCE LAT TĘSKNOTY</span>
-                            <button class="movie-list-item-button">KUP BILET</button>
-                        </div>
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="../static/images/after.jpg" alt="">
-                            <span class="movie-list-item-title">AFTER 4. BEZ SIEBIE NIE PRZETRWAMY</span>
-                            <button class="movie-list-item-button">KUP BILET</button>
-                        </div>
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="../static/images/nie_martw.jpeg" alt="">
-                            <span class="movie-list-item-title">NIE MARTW SIĘ KOCHANIE</span>
-                            <button class="movie-list-item-button">KUP BILET</button>
-                        </div>
-                    </div>
-                    <div class="movie-list3">
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="../static/images/thor.jpg" alt="">
-                            <span class="movie-list-item-title">THOR: MIŁOŚĆ I GROM</span>
-                            <button class="movie-list-item-button">KUP BILET</button>
-                        </div>
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="../static/images/shrek.jpg" alt="">
-                            <span class="movie-list-item-title">SHREK</span>
-                            <button class="movie-list-item-button">KUP BILET</button>
-                        </div>
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="../static/images/matrix.jpg" alt="">
-                            <span class="movie-list-item-title">MATRIX</span>
-                            <button class="movie-list-item-button">KUP BILET</button>
+                            <form action="/seanseBulletTrain" method="post">
+                                <button class="movie-list-item-button" name="action_movie" value="bullet_train">KUP BILET</button>
+                            </form>
                         </div>
                     </div>
                 </div>
