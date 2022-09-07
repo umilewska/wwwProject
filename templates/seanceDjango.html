@@ -34,18 +34,24 @@
                                 <p class="movie-list-item-desc">Łowca nagród Schultz i czarnoskóry niewolnik Django wyruszają w podróż, aby odbić żonę tego drugiego z rąk bezlitosnego Calvina Candie'ego.</p>
                                 <p class="movie-list-item-s">Najbliższe seanse:</p>
                                 <div class="movie-list-item-right-down">
-                                    <span class="movie-list-item-seanse">
+                                    <form action="/seanseDjango/seats" method="post">
+                                        <button class="movie-list-item-seanse-button" name="action_seance" value="12_30">
                                         <span class="hour">12:30</span>
                                         <span class="type">2D, napisy</span>
-                                    </span>
-                                    <span class="movie-list-item-seanse">
+                                        </button>
+                                    </form>
+                                    <form action="/seanseDjango/seats" method="post">
+                                        <button class="movie-list-item-seanse-button" name="action_seance" value="16_20">
                                         <span class="hour">16:20</span>
-                                        <span class="type">2D, dubbing</span>
-                                    </span>
-                                    <span class="movie-list-item-seanse">
+                                        <span class="type">2D, napisy</span>
+                                        </button>
+                                    </form>
+                                    <form action="/seanseDjango/seats" method="post">
+                                        <button class="movie-list-item-seanse-button" name="action_seance" value="18_45">
                                         <span class="hour">18:45</span>
                                         <span class="type">2D, napisy</span>
-                                    </span>
+                                        </button>
+                                    </form>
                                 </div>
                             </div>
                         </div>

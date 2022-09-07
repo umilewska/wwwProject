@@ -29,9 +29,20 @@ def seanseDjango():
 def seanseBulletTrain():
     return render_template("seanceBulletTrain.html")
 
-@app.route("/seats", methods=["POST", "GET"])
-def seats():
+# ------------------------ seats -----------------------------
+
+@app.route("/seanseBatman/seats", methods=["POST", "GET"])
+def seatsBatman():
     return render_template("seats.html")
+
+@app.route("/seanseDjango/seats", methods=["POST", "GET"])
+def seatsDjango():
+    return render_template("seats.html")
+
+@app.route("/seanseBulletTrain/seats", methods=["POST", "GET"])
+def seatsBulletTrain():
+    return render_template("seats.html")
+
 
 if __name__ == '__main__':
     app.debug=True

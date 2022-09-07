@@ -71,15 +71,16 @@ body{
     display: flex;
 }
 
-.movie-list-item-seanse{
+.movie-list-item-seanse-button{
     margin-left: 10px;
     margin-right: 10px;
     background-color: transparent;
+    color: white;
     padding: 30px;
     height: auto;
     width: auto;
-    display: inline-block;
-    border: solid 3px crimson;
+    border-color: crimson;
+    border-width: 3px;
     cursor: pointer;
 }
 
