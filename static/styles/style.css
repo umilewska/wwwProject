@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+}
+body{
+    font-family: 'Albert Sans', sans-serif;
+}
+div.navbar{
+    width: 100%;
+    height: 50px;
+    background-color: black;
+}
+div.navbar-container{
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+    height: 100%;
+    color: white;
+    font-family: 'Sen', sans-serif;
+}
+
+div.logo-container{
+    flex: 1;
+}
+
+.logo{
+
+    font-size: 30px;
+    color: green;
+}
+
+div.menu-container{
+    flex: 6;
+}
+
+.menu-list{
+    display: flex;
+    list-style: none;
+}
+
+.menu-list-item{
+    margin-right: 30px;
+}
+
+li.menu-list-item.active{
+    font-weight: bold;
+}
+
+div.profile-container{
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.profile-text-container{
+    margin: 0 20px;
+}
+
+.profile-picture{
+    width: 32px;
+    height: 32px;
+    border-radius: 70%;
+    object-fit: cover;
+}
+
+.container{
+    background-color: #151515;
+    min-height: 100vh;
+    color: white;
+}
+
+.content-container{
+    margin-left: 10%;
+    margin-right: 15%;
+}
+
+.movie-list-title{
+    padding: 20px;
+}
+
+.movie-list-container{
+    padding: 0 20px;
+}
+
+.movie-list{
+    display: flex;
+    align-items: center;
+    height: 500px;
+    margin-left: 200px;
+    margin-right: auto;
+}
+.movie-list2{
+    display: flex;
+    align-items: center;
+    height: 500px;
+    margin-left: 200px;
+    margin-right: auto;
+}
+.movie-list3{
+    display: flex;
+    align-items: center;
+    height: 500px;
+    margin-left: 200px;
+    margin-right: auto;
+}
+.movie-list-item{
+    margin-right: 50px;
+    position: relative;
+}
+
+.movie-list-item:hover .movie-list-item-img{
+    transform: scale(1.1);
+    opacity: 0.5;
+}
+
+.movie-list-item:hover .movie-list-item-button{
+    opacity: 1;
+}
+
+.movie-list-item-img{
+    transition: all 0.5s ease-in-out;
+    padding: 10px;
+    width: 270px;
+    height: 370px;
+    object-fit: cover;
+}
+
+.movie-list-item-title{
+    padding: 10px;
+    display: block;
+    font-size: 23px;
+    text-align: center;
+}
+
+.movie-list-item-button{
+    background-color: transparent;
+    color: white;
+    padding: 0 10px;
+    font-size: 23px;
+    position: absolute;
+    height: 50px;
+    width: 270px;
+    top: 40%;
+    border-color: crimson;
+    border-width: 3px;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}

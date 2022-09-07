@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Movie Design</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+            crossorigin="anonymous"
+    >
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/style.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+            href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@200&family=Roboto:ital,wght@0,100;0,400;0,500;0,700;1,300;1,700&family=Sen:wght@400;700;800&display=swap"
+            rel="stylesheet">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="navbar-container">
+            <div class="logo-container"><h1 class="logo">Telecinema</h1></div>
+            <div class="menu-container">
+                <ul class="menu-list">
+                    <li class="menu-list-item active">Home</li>
+                    <li class="menu-list-item">Movies</li>
+                    <li class="menu-list-item">Series</li>
+                    <li class="menu-list-item">Popular</li>
+                    <li class="menu-list-item">Trends</li>
+                </ul>
+            </div>
+            <div class="profile-container">
+                <img class="profile-picture" src="{{ url_for('static', filename='/images/popcorn2.jpg')}}">
+                <div class="profile-text-container">
+                    <span class="profile-text">Konto</span>
+                    <i class="fa-solid fa-caret-down"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="content-container">
+            <div class="featured-content">
+
+            </div>
+            <div class="movie-list-container">
+                <h1 class="movie-list-title">REPERTUAR</h1>
+                <div class="movie-list-wrapper">
+                    <div class="movie-list">
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="../static/images/batman.jpg" alt="">
+                            <span class="movie-list-item-title">BATMAN</span>
+                            <button class="movie-list-item-button">KUP BILET</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="../static/images/beast-440690l.jpg" alt="">
+                            <span class="movie-list-item-title">BESTIA</span>
+                            <button class="movie-list-item-button">KUP BILET</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="../static/images/bullet_train.jpg" alt="">
+                            <span class="movie-list-item-title">BULLET TRAIN</span>
+                            <button class="movie-list-item-button">KUP BILET</button>
+                        </div>
+                    </div>
+                    <div class="movie-list2">
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="../static/images/Trzy-Tysiace-Lat-Tesknoty.jpg" alt="">
+                            <span class="movie-list-item-title">TRZY TYSIĄCE LAT TĘSKNOTY</span>
+                            <button class="movie-list-item-button">KUP BILET</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="../static/images/after.jpg" alt="">
+                            <span class="movie-list-item-title">AFTER 4. BEZ SIEBIE NIE PRZETRWAMY</span>
+                            <button class="movie-list-item-button">KUP BILET</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="../static/images/nie_martw.jpeg" alt="">
+                            <span class="movie-list-item-title">NIE MARTW SIĘ KOCHANIE</span>
+                            <button class="movie-list-item-button">KUP BILET</button>
+                        </div>
+                    </div>
+                    <div class="movie-list3">
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="../static/images/thor.jpg" alt="">
+                            <span class="movie-list-item-title">THOR: MIŁOŚĆ I GROM</span>
+                            <button class="movie-list-item-button">KUP BILET</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="../static/images/shrek.jpg" alt="">
+                            <span class="movie-list-item-title">SHREK</span>
+                            <button class="movie-list-item-button">KUP BILET</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="../static/images/matrix.jpg" alt="">
+                            <span class="movie-list-item-title">MATRIX</span>
+                            <button class="movie-list-item-button">KUP BILET</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
