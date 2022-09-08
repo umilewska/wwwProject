@@ -96,12 +96,23 @@
       </div>
     </div>
 
+
     <p class="text">
       Wybrano <span id="count">0</span> miejsca. Łącznie do zapłacenia: <span
         id="total"
         >0</span
       >
+      <a href="#" id="buy_now_btn" class="btn btn-primary">Kup teraz!</a>
     </p>
     <script src="{{ url_for('static',filename='actions/seats_script.js')}}"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+
+   {#
+      <script>
+        const checkout_public_key = '{{checkout_public_key}}';
+        const checkout_session_id = '{{checkout_session_id}}';
+      </script>
+      #}
+      <script src="{{ url_for('static', filename='script-ajax.js') }}"></script>
   </body>
 </html>
