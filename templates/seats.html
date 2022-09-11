@@ -102,17 +102,14 @@
         id="total"
         >0</span
       >
-      <a href="#" id="buy_now_btn" class="btn btn-primary">Kup teraz!</a>
+{#      <a href="#" id="buy_now_btn" class="btn btn-primary">Kup teraz!</a>#}
     </p>
-    <script src="{{ url_for('static',filename='actions/seats_script.js')}}"></script>
-    <script src="https://js.stripe.com/v3/"></script>
 
-   {#
-      <script>
-        const checkout_public_key = '{{checkout_public_key}}';
-        const checkout_session_id = '{{checkout_session_id}}';
-      </script>
-      #}
-      <script src="{{ url_for('static', filename='script-ajax.js') }}"></script>
+    <div id="paypal-button"></div>
+
+<script src="{{ url_for('static',filename='actions/seats_script.js')}}"></script>
+<script src="https://www.paypalobjects.com/api/checkout.js"></script>
+<script src="{{ url_for('static',filename='actions/payment_script.js')}}"></script>
+
   </body>
 </html>
