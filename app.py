@@ -1,5 +1,6 @@
 import paypalrestsdk
 from flask import Flask, render_template, redirect, url_for, request, jsonify
+import json
 import sqlalchemy
 from streamlit import form
 
@@ -13,45 +14,57 @@ paypalrestsdk.configure({
 
 @app.route("/", methods=["POST", "GET"])
 def home():
+
     if request.method == "POST":
-        if request.form.get('action_movie') == 'batman':
-            return redirect(url_for("seanseBatman"))
-        elif request.form.get('action_movie') == 'django':
-            return redirect(url_for("seanseDjango"))
-        elif request.form.get('action_movie') == 'bullet':
-            return redirect(url_for("seanseBulletTrain"))
+        movie_data = request.form.get('movie_button')
+        with open('movies.json', 'r', encoding="utf8") as c:
+            data = json.load(c)
+        movie_name=data[movie_data]['title']
+        movie_description=data[movie_data]['description']
+        movie_image=data[movie_data]['image']
+        movie_hour1 = data[movie_data]['movie_hour1']
+        movie_hour2 = data[movie_data]['movie_hour2']
+        movie_hour3 = data[movie_data]['movie_hour3']
+        c.close()
+        reservation = {
+            "01": [movie_name]
+        }
+        with open("reservation.json", "w") as outfile:
+            json.dump(reservation, outfile)
+
+        return seanse(movie_image, movie_name, movie_description, movie_hour1, movie_hour2, movie_hour3)
     else:
         return render_template("home.html")
 
-@app.route("/seanseBatman", methods=["POST", "GET"])
-def seanseBatman():
-    return render_template("seanceBatman.html")
 
-@app.route("/seanseDjango", methods=["POST", "GET"])
-def seanseDjango():
-    return render_template("seanceDjango.html")
+@app.route("/seanse", methods=["POST", "GET"])
+def seanse(movie_img, movie_name, movie_desc, movie_hour1, movie_hour2, movie_hour3):
+    if request.method == "POST":
+        seance_hour = request.form.get('action_seance')
+        with open('seats.json', 'r', encoding="utf8") as c:
+            data = json.load(c)
+        #seance=data[seance_hour]['10:25']
+        if request.form.get('action_seance'):
+            return seats(movie_name)
+        else:
+            return render_template("seance.html", movie_img=movie_img, movie_name=movie_name, movie_desc=movie_desc,
+                                   movie_hour1=movie_hour1, movie_hour2=movie_hour2, movie_hour3=movie_hour3)
+    else:
+        return render_template("seance.html", movie_img=movie_img, movie_name=movie_name, movie_desc=movie_desc, movie_hour1=movie_hour1, movie_hour2=movie_hour2, movie_hour3=movie_hour3)
 
-@app.route("/seanseBulletTrain", methods=["POST", "GET"])
-def seanseBulletTrain():
-    return render_template("seanceBulletTrain.html")
 
-# ------------------------ seats -----------------------------
-
-@app.route("/seanseBatman/seats", methods=["POST", "GET"])
-def seatsBatman():
-    return render_template("seats.html")
-
-@app.route("/seanseDjango/seats", methods=["POST", "GET"])
-def seatsDjango():
-    return render_template("seats.html")
-
-@app.route("/seanseBulletTrain/seats", methods=["POST", "GET"])
-def seatsBulletTrain():
-    return render_template("seats.html")
+@app.route("/seats", methods=["POST", "GET"])
+def seats():
+    if request.method == "POST":
+        return render_template("seats.html")
+    else:
+        return render_template("seats.html")
 
 @app.route('/payment', methods=['POST'])
 def payment():
 
+    x = request.form.get("total")
+    print(x)
     payment = paypalrestsdk.Payment({
         "intent": "sale",
         "payer": {
@@ -75,7 +88,7 @@ def payment():
                     "quantity": 1}],
             },
             "amount": {
-                "total": "30.00",
+                "total": x,
                 "currency": "PLN"},
             "description": "Zakup biletu do kina."}]})
 

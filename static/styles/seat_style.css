@@ -16,6 +16,14 @@ body {
   margin: 0;
 }
 
+.movie-list-title{
+    padding: 20px;
+}
+
+.movie-list-container{
+    padding: 0 20px;
+}
+
 .movie-container {
   margin: 20px 0;
 }

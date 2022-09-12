@@ -1,0 +1,27 @@
+{
+  "BATMAN": {
+    "title": "BATMAN",
+    "description": "Batman i James Gordon stawiają czoła nieobliczalnemu Człowiekowi-Zagadce w skorumpowanym Gotham City.",
+    "image": "batman.jpg",
+    "movie_hour1": "10:25",
+    "movie_hour2": "15:15",
+    "movie_hour3": "17:45"
+  },
+  "DJANGO": {
+    "title": "DJANGO",
+    "description": "Łowca nagród Schultz i czarnoskóry niewolnik Django wyruszają w podróż, aby odbić żonę tego drugiego z rąk bezlitosnego Calvina Candie'ego.",
+    "image": "django.jpg",
+    "movie_hour1": "12:30",
+    "movie_hour2": "16:20",
+    "movie_hour3": "18:45"
+  },
+  "BULLET_TRAIN": {
+    "title": "BULLET TRAIN",
+    "description": "Pięcioro zabójców, znajdujących się w szybkim pociągu jadącym z Tokio do Morioki, odkrywa, że ich zlecenia są ze sobą wzajemnie powiązane. Powstaje pytanie, kto wyjdzie z pociągu żywy i co ich czeka na stacji końcowej.",
+    "image": "bullet_train.jpg",
+    "movie_hour1": "11:25",
+    "movie_hour2": "15:45",
+    "movie_hour3": "18:15"
+  }
+
+}

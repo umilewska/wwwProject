@@ -28,27 +28,27 @@
                 <div class="movie-list-wrapper">
                     <div class="movie-list">
                         <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="../static/images/bullet_train.jpg" alt="">
+                            <img class="movie-list-item-img" src="../static/images/{{ movie_img }}" alt="">
                             <div class="movie-list-item-right">
-                                <p class="movie-list-item-title">BULLET TRAIN</p>
-                                <p class="movie-list-item-desc">Pięcioro zabójców, znajdujących się w szybkim pociągu jadącym z Tokio do Morioki, odkrywa, że ich zlecenia są ze sobą wzajemnie powiązane. Powstaje pytanie, kto wyjdzie z pociągu żywy i co ich czeka na stacji końcowej.</p>
+                                <p class="movie-list-item-title">{{ movie_name }}</p>
+                                <p class="movie-list-item-desc">{{ movie_desc }}</p>
                                 <p class="movie-list-item-s">Najbliższe seanse:</p>
                                 <div class="movie-list-item-right-down">
-                                    <form action="/seanseBulletTrain/seats" method="post">
-                                        <button class="movie-list-item-seanse-button" name="action_seance" value="11_25">
-                                        <span class="hour">11:25</span>
-                                        <span class="type">2D, dubbing</span>
-                                        </button>
-                                    </form>
-                                    <form action="/seanseBulletTrain/seats" method="post">
-                                        <button class="movie-list-item-seanse-button" name="action_seance" value="15_45">
-                                        <span class="hour">15:45</span>
+                                    <form action="/seats" method="post" >
+                                        <button class="movie-list-item-seanse-button" name="action_seance" value="{{ movie_hour1 }}">
+                                        <span class="hour">{{ movie_hour1 }}</span>
                                         <span class="type">2D, napisy</span>
                                         </button>
                                     </form>
-                                    <form action="/seanseBulletTrain/seats" method="post">
-                                        <button class="movie-list-item-seanse-button" name="action_seance" value="18_15">
-                                        <span class="hour">18:15</span>
+                                    <form action="/seats" method="post">
+                                        <button class="movie-list-item-seanse-button" name="action_seance" value="{{ movie_hour2 }}">
+                                        <span class="hour">{{ movie_hour2 }}</span>
+                                        <span class="type">2D, dubbing</span>
+                                        </button>
+                                    </form>
+                                    <form action="/seats" method="post">
+                                        <button class="movie-list-item-seanse-button" name="action_seance" value="{{ movie_hour3 }}">
+                                        <span class="hour">{{ movie_hour3 }}</span>
                                         <span class="type">2D, napisy</span>
                                         </button>
                                     </form>
