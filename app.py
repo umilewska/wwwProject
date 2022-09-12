@@ -1,6 +1,9 @@
 import paypalrestsdk
 from flask import Flask, render_template, redirect, url_for, request, jsonify
 import json
+import js
+
+
 import sqlalchemy
 from streamlit import form
 
@@ -56,15 +59,18 @@ def seanse(movie_img, movie_name, movie_desc, movie_hour1, movie_hour2, movie_ho
 @app.route("/seats", methods=["POST", "GET"])
 def seats():
     if request.method == "POST":
+        price = request.form.get('total')
+        reservation = {
+            "01": [price]
+        }
+        with open("reservation.json", "w") as outfile:
+            json.dump(reservation, outfile)
         return render_template("seats.html")
     else:
         return render_template("seats.html")
 
 @app.route('/payment', methods=['POST'])
 def payment():
-
-    x = request.form.get("total")
-    print(x)
     payment = paypalrestsdk.Payment({
         "intent": "sale",
         "payer": {
@@ -88,7 +94,7 @@ def payment():
                     "quantity": 1}],
             },
             "amount": {
-                "total": x,
+                "total": 30,
                 "currency": "PLN"},
             "description": "Zakup biletu do kina."}]})
 
